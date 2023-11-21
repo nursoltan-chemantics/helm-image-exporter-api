@@ -11,7 +11,7 @@ let browser;
 let page;
 
 const initializeBrowser = async () => {
-  browser = await puppeteer.launch({ headless: false });
+  browser = await puppeteer.launch({ headless: true });
   page = await browser.newPage();
   await page.goto(
     "http://srd.chemantics.com:9999/WebService/hwe/examples/App.htm"
