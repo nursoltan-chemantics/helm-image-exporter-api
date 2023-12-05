@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+    image: helm-image
+    container_name: helm
+    ports:
+      - "3005:3005"
+    environment:
+      - NODE_ENV=production
+      - HELM_DEMO_URL=http://srd.chemantics.com:9999/WebService/hwe/examples/App.htm
