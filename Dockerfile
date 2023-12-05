@@ -1,4 +1,4 @@
-FROM node:slim AS app
+FROM node:16 AS app
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 

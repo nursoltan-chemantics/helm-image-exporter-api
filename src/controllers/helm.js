@@ -5,7 +5,7 @@ let browser;
 let page;
 
 const initializeBrowser = async () => {
-  browser = await puppeteer.launch({ headless: true });
+  browser = await puppeteer.launch({ args: ["--no-sandbox"], headless: true });
   page = await browser.newPage();
 
   await page.goto(
